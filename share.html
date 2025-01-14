@@ -169,7 +169,7 @@
       sessionId: localSessionId,
     }));
     const [{ trackName, sessionId }] = tracksToPull;
-    url.pathname = '/connect.html';
+    url.pathname = url.pathname.replace(/\/share.html$/, '/connect.html')
     url.searchParams.set('trackName', trackName);
     url.searchParams.set('sessionId', sessionId);
     shareLink.href = url.href;
